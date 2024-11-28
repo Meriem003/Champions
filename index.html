@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="./img/Sticker terrain de foot.jpg" alt="">
+        <h3>FUT CHAMP</h3>
+    </nav>
+    <div class="container">
+        <div class="formu">
+            <h1>Ajouter un Joueur</h1>
+            <form id="playerForm">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <select id="name" name="name" required>
+                            <option value="lionel messi">Lionel Messi</option>
+                            <option value="cristiano ronaldo">Cristiano Ronaldo</option>
+                            <option value="kylian mbappe">Kylian Mbappé</option>
+                            <option value="erling haaland">Erling Haaland</option>
+                            <option value="neymar jr">Neymar Jr</option>
+                            <option value="achraf hakimi">Achraf Hakimi</option>
+                            <option value="kevin de bruyne">Kevin De Bruyne</option>
+                            <option value="robert lewandowski">Robert Lewandowski</option>
+                            <option value="mohamed salah">Mohamed Salah</option>
+                            <option value="karim benzema">Karim Benzema</option>
+                            <option value="luka modric">Luka Modric</option>
+                            <option value="vinicius jr">Vinícius Jr</option>
+                            <option value="harry kane">Harry Kane</option>
+                            <option value="jude bellingham">Jude Bellingham</option>
+                            <option value="antoine griezmann">Antoine Griezmann</option>                          
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position :</label>
+                    <select id="position" name="position" required>
+                        <option value="CB">CB</option>
+                        <option value="LB">LB</option>
+                        <option value="RB">RB</option>
+                        <option value="CM">CM</option>
+                        <option value="GK">GK</option>                        
+                        <option value="LW">LW</option>
+                        <option value="RW">RW</option>
+                        <option value="ST">ST</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationalité :</label>
+                    <select id="nationality" name="Nationalité" required>
+                        <option value="argentine">Argentine</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="france">France</option>
+                        <option value="brazil">Brésil</option>
+                        <option value="norway">Norvège</option>
+                        <option value="morocco">Maroc</option>
+                        <option value="belgium">Belgique</option>
+                        <option value="poland">Pologne</option>
+                        <option value="egypt">Égypte</option>
+                        <option value="croatia">Croatie</option>
+                        <option value="england">Angleterre</option>
+                        <option value="germany">Allemagne</option>
+                        <option value="spain">Espagne</option>
+                        <option value="italy">Italie</option>
+                        <option value="netherlands">Pays-Bas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Club">club :</label>
+                    <select id="club" name="clup" required>
+                        <option value="psg">Paris Saint-Germain</option>
+                        <option value="real-madrid">Real Madrid</option>
+                        <option value="fc-barcelona">FC Barcelona</option>
+                        <option value="manchester-united">Manchester United</option>
+                        <option value="manchester-city">Manchester City</option>
+                        <option value="liverpool">Liverpool FC</option>
+                        <option value="bayern-munich">Bayern Munich</option>
+                        <option value="juventus">Juventus</option>
+                        <option value="inter-milan">Inter Milan</option>
+                        <option value="ac-milan">AC Milan</option>
+                        <option value="chelsea">Chelsea FC</option>
+                        <option value="arsenal">Arsenal FC</option>
+                        <option value="atletico-madrid">Atlético Madrid</option>
+                        <option value="borussia-dortmund">Borussia Dortmund</option>
+                        <option value="ajax">Ajax</option>
+                    </select>
+                </div>
+                <div class="stats-group">
+                    <div class="form-group">
+                        <label for="rating">Rating :</label>
+                        <input type="number" id="rating" name="rating" placeholder="Entrez  rating" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pace">Pace :</label>
+                        <input type="number" id="pace" name="pace" placeholder="Entrez pace" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="shooting">Shooting :</label>
+                        <input type="number" id="shooting" name="shooting" placeholder="Entrez shooting" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passing">Passes :</label>
+                        <input type="number" id="passing" name="passing" placeholder="Entrez passing" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dribbling">Dribbles :</label>
+                        <input type="number" id="dribbling" name="dribbling" placeholder="Entrez dribbling" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="defending">Défense :</label>
+                        <input type="number" id="defending" name="defending" placeholder="Entrez defending" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="defending">Défense :</label>
+                        <input type="number" id="defending" name="defending" placeholder="Entrez defending" min="1" max="100" required>
+                    </div>
+                </div>
+                <div class="Gk-joueur">
+                    <div class="form-group">
+                        <label for="rating">rating :</label>
+                        <input type="number" id="rating" name="rating" placeholder="Entrez rating" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="diving">diving :</label>
+                        <input type="number" id="diving" name="diving" placeholder="Entrez handling" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="handling">handling :</label>
+                        <input type="number" id="handling" name="handling" placeholder="Entrez handling" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kicking">kicking :</label>
+                        <input type="number" id="kicking" name="kicking" placeholder="Entrez kicking" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reflexes">reflexes :</label>
+                        <input type="number" id="reflexes" name="reflexes" placeholder="Entrez reflexes" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="speed">speed :</label>
+                        <input type="number" id="speed" name="speed" placeholder="Entrez speed" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="positioning">positioning :</label>
+                        <input type="number" id="positioning" name="positioning" placeholder="Entrez positioning" min="1" max="100" required>
+                    </div>
+            </div>
+            <button type="button" onclick="addJoueur()">Ajouter le joueur</button>
+            </form>
+        </div>
+        <div class="foot">
+            <div class="terrain">
+                <div class="GK">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+                </div>
+                <div class="CBone">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+                </div>
+                <div class="CBtow">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+                </div>
+                <div class="lb">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+                </div>
+                <div class="rb">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+                </div>
+                <div class="CMone">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+                </div>
+                <div class="CMtow">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+                </div>
+                <div class="CMtrois">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+            </div>
+            <div class="lw">
+                <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+            </div>
+            <div class="RW">
+                <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+            </div>
+            <div class="ST">
+                <img src="./img/téléchargement__24_-removebg-preview.png" alt="">
+            </div>
+
+        </div>
+                <div class="scr">
+                    <br>
+                    <h3>LES REMPLACANTS</h3>
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="" class="imane">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="" class="imane">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="" class="imane">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="" class="imane">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="" class="imane">
+                    <img src="./img/téléchargement__24_-removebg-preview.png" alt="" class="imane">
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

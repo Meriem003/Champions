@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(113, 20%, 91%);
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+nav {
+    background-color: #185B2B;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px #183220;
+}
+nav img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+nav h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d2ead9;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+}
+.formu {
+    flex: 1 1 45%;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #84ac8d;
+    box-shadow: 0 4px 6px rgba(3, 8, 5, 0.2);
+}
+.formu h1 {
+    font-size: 24px;
+    color: #185B2B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+form .form-group {
+    margin-bottom: 15px;
+}
+form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    background-color: #dee8e1;
+    border: 1px solid #eae6e6;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #185B2B;
+    color: #c9d8cd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+    box-shadow: 0 0 5px rgba(0, 11, 3, 0.5);
+}
+form button:hover {
+    transform: scale(1.1);
+    background-color: #0a431a;
+}
+.Gk-joueur{
+    display: none;
+}
+.terrain {
+    background-image: url(./img/modif.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 85%;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 10px 10px 15px rgba(56, 151, 21, 0.3);
+}
+.scr img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    filter: drop-shadow(10px 10px 15px rgba(12, 29, 7, 0.3));
+}
+.terrain img {
+    width: 170px;
+    height: 155px;
+}
+.GK,
+.CBone,
+.CBtow,
+.lb,
+.rb,
+.CMone,
+.CMtow,
+.CMtrois,
+.lw,
+.RW,
+.ST {
+    position: absolute;
+}
+
+.GK{
+    left: 235px ;
+}
+
+.CBone{
+    top: 120px;
+}
+.CBtow{
+    top: 120px;
+    left: 150px;
+}
+.lb{
+    top: 120px;
+    left: 450px;
+}
+.rb{
+    top: 120px;
+    left: 300px;
+}
+.CMone{
+    top: 330px;
+    left: 240px;
+}
+.CMtow{
+    top: 250px;
+    left: 50px;
+}
+.CMtrois{
+    top: 250px;
+    left: 420px;
+}
+.lw {
+    top: 480px;
+    left: 50px;
+}
+
+.RW {
+    top: 480px;
+    left: 420px;
+}
+
+.ST {
+    top: 550px;
+    left: 240px;
+}
+.scr h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #145423;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+.scr {
+    background-color: #84ac8d;
+    margin-top: 20px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px rgba(30, 71, 14, 0.3);
+}
+.terrain img {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(10px 10px 15px rgba(228, 239, 225, 0.3));
+}
+.terrain img:hover {
+    transform: scale(1.2);
+}
+
