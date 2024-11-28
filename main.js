@@ -49,6 +49,4 @@ function addJoueur() {
         speed = document.getElementById('speed').value;
         positioning = document.getElementById('positioning').value;
     }
-
-    
 }
