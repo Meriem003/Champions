@@ -114,8 +114,8 @@ form button:hover {
     filter: drop-shadow(10px 10px 15px rgba(12, 29, 7, 0.3));
 }
 .terrain img {
-    width: 170px;
-    height: 155px;
+    width: 150px;
+    height: 140px;
 }
 .GK,
 .CBone,
