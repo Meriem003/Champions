@@ -11,17 +11,18 @@ position.addEventListener("change", function (event) {
         for (let i = 0; i < gkJoueur.length; i++) {
             gkJoueur[i].style.display = "block";
         }
-    } else {
+    } else{
         for (let i = 0; i < allJoueur.length; i++) {
             allJoueur[i].style.display = "block";
         }
-        for (let i = 0; i < allJoueur.length; i++) {
-            allJoueur[i].style.display = "none";
+        for (let i = 0; i < gkJoueur.length; i++) {
+            gkJoueur[i].style.display = "none";
         }
     }
 });
 
 function addJoueur() {
+
     const name = document.getElementById('name').value;
     const position = document.getElementById('position').value;
     const nationality = document.getElementById('nationality').value;
@@ -32,14 +33,21 @@ function addJoueur() {
     const passing = document.getElementById('passing').value;
     const dribbling = document.getElementById('dribbling').value;
     const defending = document.getElementById('defending').value;
+
+    let diving = '';
+    let handling = '';
+    let kicking = '';
+    let reflexes = '';
+    let speed = '';
+    let positioning = '';
+
     if (position === 'GK') {
-       let diving = document.getElementById('diving').value;
-       let handling = document.getElementById('handling').value;
-       let kicking = document.getElementById('kicking').value;
-       let reflexes = document.getElementById('reflexes').value;
-       let speed = document.getElementById('speed').value;
-       let positioning = document.getElementById('positioning').value;
+        diving = document.getElementById('diving').value;
+        handling = document.getElementById('handling').value;
+        kicking = document.getElementById('kicking').value;
+        reflexes = document.getElementById('reflexes').value;
+        speed = document.getElementById('speed').value;
+        positioning = document.getElementById('positioning').value;
     }
 
-    
 }
