@@ -22,7 +22,6 @@ position.addEventListener("change", function (event) {
 });
 
 var select = document.getElementById('position');
-
 function addJoueur() {
 
     let post = document.getElementById(`${select.value}`);
@@ -34,17 +33,17 @@ function addJoueur() {
     statique[0].textContent = rt.value;
     let nom = document.getElementById('name')
     statique[2].textContent = nom.value;
-    let pc = document.getElementById('pace')
-    statique[4].textContent = pc.value;
-    let st = document.getElementById('shooting')
-    statique[6].textContent = st.value;
-    let psg = document.getElementById('passing')
-    statique[8].textContent = psg.value;
-    let dr = document.getElementById('dribbling')
-    statique[10].textContent = dr.value;
-    let df = document.getElementById('defending')
-    statique[12].textContent = df.value;
-    let ph = document.getElementById('physical')
-    statique[14].textContent = ph.value;
-}
+        let pc = document.getElementById('pace');
+        let st = document.getElementById('shooting');
+        let psg = document.getElementById('passing');
+        let dr = document.getElementById('dribbling');
+        let df = document.getElementById('defending');
+        let ph = document.getElementById('physical');
+        statique[4].textContent = pc.value;
+        statique[6].textContent = st.value;
+        statique[8].textContent = psg.value;
+        statique[10].textContent = dr.value;
+        statique[12].textContent = df.value;
+        statique[14].textContent = ph.value;
 
+}
