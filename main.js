@@ -21,32 +21,30 @@ position.addEventListener("change", function (event) {
     }
 });
 
+var select = document.getElementById('position');
+
 function addJoueur() {
 
-    const name = document.getElementById('name').value;
-    const position = document.getElementById('position').value;
-    const nationality = document.getElementById('nationality').value;
-    const club = document.getElementById('club').value;
-    const rating = document.getElementById('rating').value;
-    const pace = document.getElementById('pace').value;
-    const shooting = document.getElementById('shooting').value;
-    const passing = document.getElementById('passing').value;
-    const dribbling = document.getElementById('dribbling').value;
-    const defending = document.getElementById('defending').value;
-
-    let diving = '';
-    let handling = '';
-    let kicking = '';
-    let reflexes = '';
-    let speed = '';
-    let positioning = '';
-
-    if (position === 'GK') {
-        diving = document.getElementById('diving').value;
-        handling = document.getElementById('handling').value;
-        kicking = document.getElementById('kicking').value;
-        reflexes = document.getElementById('reflexes').value;
-        speed = document.getElementById('speed').value;
-        positioning = document.getElementById('positioning').value;
-    }
+    let post = document.getElementById(`${select.value}`);
+    let imgJoueur = post.querySelector('img')
+    let inputs = document.getElementById('url')
+    imgJoueur.setAttribute('src',inputs.value)
+    let statique = post.querySelectorAll('p')
+    let rt = document.getElementById('rating')
+    statique[0].textContent = rt.value;
+    let nom = document.getElementById('name')
+    statique[2].textContent = nom.value;
+    let pc = document.getElementById('pace')
+    statique[4].textContent = pc.value;
+    let st = document.getElementById('shooting')
+    statique[6].textContent = st.value;
+    let psg = document.getElementById('passing')
+    statique[8].textContent = psg.value;
+    let dr = document.getElementById('dribbling')
+    statique[10].textContent = dr.value;
+    let df = document.getElementById('defending')
+    statique[12].textContent = df.value;
+    let ph = document.getElementById('physical')
+    statique[14].textContent = ph.value;
 }
+
