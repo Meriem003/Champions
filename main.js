@@ -21,7 +21,57 @@ position.addEventListener("change", function (event) {
     }
 });
 
+function validationChamps() {
+    let errors = [];
+    const name = document.getElementById('name').value.trim();
+    const position = document.getElementById('position').value.trim();
+    const rating = document.getElementById('rating').value.trim();
+    const photoUrl = document.getElementById('url').value.trim();
+    const nationality = document.getElementById('nationality').value.trim();
+    const club = document.getElementById('club').value.trim();
+
+    if (!name || !position || !rating || !photoUrl || !club || !nationality) {
+        errors.push("mazal chi champs khawya");
+    }
+
+    if (position === "GK") {
+        const diving = document.getElementById('diving').value.trim();
+        const handling = document.getElementById('handling').value.trim();
+        const kicking = document.getElementById('kicking').value.trim();
+        const reflexes = document.getElementById('reflexes').value.trim();
+        const speed = document.getElementById('speed').value.trim();
+        const positioning = document.getElementById('positioning').value.trim();
+
+        if (!diving || !handling || !kicking || !reflexes || !speed || !positioning) {
+            errors.push("mazal chi champs khawya.");
+        }
+    } else {
+        const pace = document.getElementById('pace').value.trim();
+        const shooting = document.getElementById('shooting').value.trim();
+        const passing = document.getElementById('passing').value.trim();
+        const dribbling = document.getElementById('dribbling').value.trim();
+        const defending = document.getElementById('defending').value.trim();
+        const physical = document.getElementById('physical').value.trim();
+
+        if (!pace || !shooting || !passing || !dribbling || !defending || !physical) {
+            errors.push("mazal chi champs khawya");
+        }
+    }
+
+    if (errors.length > 0) {
+        alert(errors);
+        return false;
+    }
+
+    return true;
+}
+
+
+
 function addJoueur() {
+    if (!validationChamps()) {
+        return; 
+    }
 var select = document.getElementById('position');
     
     let post = document.getElementById(`${select.value}`);
@@ -35,7 +85,6 @@ var select = document.getElementById('position');
     statique[2].textContent = nom.value;
 
     if (select.value === "GK"){
-        
     let dv = document.getElementById('diving');
     let hd = document.getElementById('handling');
     let kc = document.getElementById('kicking');
@@ -63,4 +112,7 @@ var select = document.getElementById('position');
         statique[12].textContent = df.value;
         statique[14].textContent = ph.value;
       }
+      document.getElementById("playerForm").reset();
 }
+
+
