@@ -30,7 +30,7 @@ function validationChamps() {
     const nationality = document.getElementById('nationality').value.trim();
     const club = document.getElementById('club').value.trim();
 
-    if (!name || !position || !rating || !photoUrl || !club || !nationality) {
+    if (name === ""  || position === ""  || rating === ""  || photoUrl === ""  || club === ""  || nationality === "" ) {
         errors.push("mazal chi champs khawya");
     }
 
@@ -42,7 +42,7 @@ function validationChamps() {
         const speed = document.getElementById('speed').value.trim();
         const positioning = document.getElementById('positioning').value.trim();
 
-        if (!diving || !handling || !kicking || !reflexes || !speed || !positioning) {
+        if (diving === ""  || handling === ""  || kicking === ""  || reflexes === ""  || speed === ""  || positioning === "" ) {
             errors.push("mazal chi champs khawya.");
         }
     } else {
@@ -53,7 +53,7 @@ function validationChamps() {
         const defending = document.getElementById('defending').value.trim();
         const physical = document.getElementById('physical').value.trim();
 
-        if (!pace || !shooting || !passing || !dribbling || !defending || !physical) {
+        if (pace === ""  || shooting === ""  || passing === ""  || dribbling === ""  || defending === ""  || physical === "" ) {
             errors.push("mazal chi champs khawya");
         }
     }
@@ -123,7 +123,9 @@ function addJoueur() {
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete');
         deleteButton.onclick = () => {
+            Delete(post);
         };
+        
 
         post.appendChild(editButton);
         post.appendChild(deleteButton);
@@ -159,4 +161,36 @@ function Edit(post, position) {
         document.getElementById('defending').value = statique[12].textContent;
         document.getElementById('physical').value = statique[14].textContent;
     }
+}
+
+function Delete(post) {
+    const imgJoueur = post.querySelector('img');
+    const statique = post.querySelectorAll('p');
+
+    imgJoueur.setAttribute('src', '');
+    statique[0].textContent = '';
+    statique[2].textContent = '';
+
+    const position = document.getElementById('position').value;
+    if (position === "GK") {
+        statique[4].textContent = '';
+        statique[6].textContent = '';
+        statique[8].textContent = '';
+        statique[10].textContent = '';
+        statique[12].textContent = '';
+        statique[14].textContent = '';
+    } else {
+        statique[4].textContent = ''; 
+        statique[6].textContent = '';
+        statique[8].textContent = '';
+        statique[10].textContent = '';
+        statique[12].textContent = '';
+        statique[14].textContent = '';
+    }
+
+    const editButton = post.querySelector('.edit');
+    const deleteButton = post.querySelector('.delete');
+    if (editButton) post.removeChild(editButton);
+    if (deleteButton) post.removeChild(deleteButton);
+
 }
