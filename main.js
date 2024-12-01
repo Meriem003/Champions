@@ -67,55 +67,57 @@ function validationChamps() {
 }
 
 
-
+let joueurEnEdition = null;
 function addJoueur() {
     if (!validationChamps()) {
         return; 
     }
-var select = document.getElementById('position');
-    
-    let post = document.getElementById(`${select.value}`);
-    let imgJoueur = post.querySelector('img')
-    let inputs = document.getElementById('url')
-    imgJoueur.setAttribute('src',inputs.value)
-    let statique = post.querySelectorAll('p')
-    let rt = document.getElementById('rating')
+
+    const select = document.getElementById('position');
+    const post = joueurEnEdition || document.getElementById(`${select.value}`);
+
+    const imgJoueur = post.querySelector('img');
+    const inputs = document.getElementById('url');
+    imgJoueur.setAttribute('src', inputs.value);
+    const statique = post.querySelectorAll('p');
+    const rt = document.getElementById('rating');
+    const nom = document.getElementById('name');
     statique[0].textContent = rt.value;
-    let nom = document.getElementById('name')
     statique[2].textContent = nom.value;
 
-    if (select.value === "GK"){
-    let dv = document.getElementById('diving');
-    let hd = document.getElementById('handling');
-    let kc = document.getElementById('kicking');
-    let rf = document.getElementById('reflexes');
-    let sp = document.getElementById('speed');
-    let ps = document.getElementById('positioning');
-    statique[4].textContent = dv.value;
-    statique[6].textContent = hd.value;
-    statique[8].textContent = kc.value;
-    statique[10].textContent = rf.value;
-    statique[12].textContent = sp.value;
-    statique[14].textContent = ps.value;
-    
-    }else{
-        let pc = document.getElementById('pace');
-        let st = document.getElementById('shooting');
-        let psg = document.getElementById('passing');
-        let dr = document.getElementById('dribbling');
-        let df = document.getElementById('defending');
-        let ph = document.getElementById('physical');
+    if (select.value === "GK") {
+        const dv = document.getElementById('diving');
+        const hd = document.getElementById('handling');
+        const kc = document.getElementById('kicking');
+        const rf = document.getElementById('reflexes');
+        const sp = document.getElementById('speed');
+        const ps = document.getElementById('positioning');
+        statique[4].textContent = dv.value;
+        statique[6].textContent = hd.value;
+        statique[8].textContent = kc.value;
+        statique[10].textContent = rf.value;
+        statique[12].textContent = sp.value;
+        statique[14].textContent = ps.value;
+    } else {
+        const pc = document.getElementById('pace');
+        const st = document.getElementById('shooting');
+        const psg = document.getElementById('passing');
+        const dr = document.getElementById('dribbling');
+        const df = document.getElementById('defending');
+        const ph = document.getElementById('physical');
         statique[4].textContent = pc.value;
         statique[6].textContent = st.value;
         statique[8].textContent = psg.value;
         statique[10].textContent = dr.value;
         statique[12].textContent = df.value;
         statique[14].textContent = ph.value;
-}
+    }
 
+    if (!joueurEnEdition && !post.querySelector('.edit') && !post.querySelector('.delete')) {
         const editButton = document.createElement('button');
-        editButton.classList.add('edit'); 
+        editButton.classList.add('edit');
         editButton.onclick = () => {
+            Edit(post, select.value);
         };
 
         const deleteButton = document.createElement('button');
@@ -125,8 +127,36 @@ var select = document.getElementById('position');
 
         post.appendChild(editButton);
         post.appendChild(deleteButton);
+    }
 
+    joueurEnEdition = null;
     document.getElementById("playerForm").reset();
 }
 
 
+function Edit(post, position) {
+    joueurEnEdition = post;
+    const img = post.querySelector('img').getAttribute('src');
+    const statique = post.querySelectorAll('p');
+
+    document.getElementById('url').value = img;
+    document.getElementById('rating').value = statique[0].textContent;
+    document.getElementById('name').value = statique[2].textContent;
+    document.getElementById('position').value = position;
+
+    if (position === "GK") {
+        document.getElementById('diving').value = statique[4].textContent;
+        document.getElementById('handling').value = statique[6].textContent;
+        document.getElementById('kicking').value = statique[8].textContent;
+        document.getElementById('reflexes').value = statique[10].textContent;
+        document.getElementById('speed').value = statique[12].textContent;
+        document.getElementById('positioning').value = statique[14].textContent;
+    } else {
+        document.getElementById('pace').value = statique[4].textContent;
+        document.getElementById('shooting').value = statique[6].textContent;
+        document.getElementById('passing').value = statique[8].textContent;
+        document.getElementById('dribbling').value = statique[10].textContent;
+        document.getElementById('defending').value = statique[12].textContent;
+        document.getElementById('physical').value = statique[14].textContent;
+    }
+}
