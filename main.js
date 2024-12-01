@@ -114,13 +114,11 @@ var select = document.getElementById('position');
 }
 
         const editButton = document.createElement('button');
-        editButton.textContent = "EDIT";
         editButton.classList.add('edit'); 
         editButton.onclick = () => {
         };
 
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = "Supprimer";
         deleteButton.classList.add('delete');
         deleteButton.onclick = () => {
         };

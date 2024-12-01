@@ -110,7 +110,7 @@ form button:hover {
 }
 .scr img {
     width: 100px;
-    height: 100px;
+    height: 150px;
     margin: 10px;
     filter: drop-shadow(10px 10px 15px rgba(12, 29, 7, 0.3));
 }
@@ -126,6 +126,7 @@ form button:hover {
 .RW,
 .ST {
     position: absolute;
+    filter: drop-shadow(10px 10px 15px rgb(0, 0, 0));
 }
 
 .GK{
@@ -133,10 +134,9 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top:5px;
-    left: 260px ;
+    width: 150px;
+    height: 190px;
+    left: 240px ;
 }
 
 .CBone{
@@ -144,9 +144,9 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 150px;
+    width: 150px;
+    height: 190px;
+    top: 170px;
     left: 60px;
 }
 .CBtow{
@@ -154,9 +154,9 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 150px;
+    width: 150px;
+    height: 190px;
+    top: 170px;
     left: 190px;
 }
 .lb{
@@ -164,9 +164,9 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 150px;
+    width: 150px;
+    height: 190px;
+    top: 170px;
     left: 450px;
 }
 .rb{
@@ -174,9 +174,9 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 150px;
+    width: 150px;
+    height: 190px;
+    top: 170px;
     left: 320px;
 }
 .CMone{
@@ -184,40 +184,40 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 350px;
-    left: 260px;
+    width: 150px;
+    height: 190px;
+    top: 360px;
+    left: 250px;
 }
 .CMtow{
     background-image: url(./img/téléchargement__24_-removebg-preview.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 300px;
-    left: 60px;
+    width: 150px;
+    height: 190px;
+    top: 340px;
+    left: 100px;
 }
 .CMtrois{
     background-image: url(./img/téléchargement__24_-removebg-preview.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 300px;
-    left: 420px;
+    width: 150px;
+    height: 190px;
+    top: 340px;
+    left: 400px;
 }
 .lw {
     background-image: url(./img/téléchargement__24_-removebg-preview.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 500px;
-    left: 60px;
+    width: 150px;
+    height: 190px;
+    top: 530px;
+    left: 100px;
 }
 
 .RW {
@@ -225,10 +225,10 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 500px;
-    left: 420px;
+    width: 150px;
+    height: 190px;
+    top: 530px;
+    left: 400px;
 }
 
 .ST {
@@ -236,10 +236,10 @@ form button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 150px;
-    top: 580px;
-    left: 260px;
+    width: 150px;
+    height: 190px;
+    top: 560px;
+    left: 250px;
 }
 .scr h3 {
     font-size: 24px;
@@ -307,28 +307,30 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 95px;
-    left: 16px;
-    font-size: 9px;
-    color: rgb(228, 228, 228);
-    gap: 4px;
+    top: 118px;
+    left: 22px;
+    font-size: 10px;
+    color: rgb(25, 86, 19);
+    gap: 6px;
+    background-color: #fdfefe49;
 }
 
 .nom{
     position: absolute;
-    top: 80px;
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    width: 100%;
-    font-size: 11px;
+    top: 100px;
+    left: 22px;
+    color: rgba(2, 33, 7, 0.842);
+    background-color: #fdfefe49;
+    width: 70%;
+    font-size: 14px;
     text-align: center;
 }
 
 .position{
     position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 12px;
+    top: 25px;
+    left: 25px;
+    font-size: 20px;
     color: rgb(208, 232, 219);
 }
 .joueur{
@@ -342,3 +344,20 @@ form button:hover {
     width: 75px;
 }
 
+.edit, .delete {
+    margin: 6px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5%;
+    position: relative;
+    top: 137px;
+    left: 33px;
+}
+
+.edit {
+    background-color: #fefdfd;
+}
+
+.delete {
+    background-color: #000000; 
+}
