@@ -111,8 +111,24 @@ var select = document.getElementById('position');
         statique[10].textContent = dr.value;
         statique[12].textContent = df.value;
         statique[14].textContent = ph.value;
-      }
-      document.getElementById("playerForm").reset();
+}
+
+        const editButton = document.createElement('button');
+        editButton.textContent = "EDIT";
+        editButton.classList.add('edit'); 
+        editButton.onclick = () => {
+        };
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = "Supprimer";
+        deleteButton.classList.add('delete');
+        deleteButton.onclick = () => {
+        };
+
+        post.appendChild(editButton);
+        post.appendChild(deleteButton);
+
+    document.getElementById("playerForm").reset();
 }
 
 
