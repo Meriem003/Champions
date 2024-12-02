@@ -146,8 +146,8 @@ form button:hover {
     background-size: cover;
     width: 150px;
     height: 190px;
-    top: 150px;
-    left: 40px;
+    top: 180px;
+    left: 310px;
 }
 .CBtow{
     background-image: url(./img/téléchargement__24_-removebg-preview.png);
@@ -157,7 +157,7 @@ form button:hover {
     width: 150px;
     height: 190px;
     top: 180px;
-    left: 190px;
+    left: 180px;
 }
 .lb{
     background-image: url(./img/téléchargement__24_-removebg-preview.png);
@@ -167,7 +167,7 @@ form button:hover {
     width: 150px;
     height: 190px;
     top: 150px;
-    left: 440px;
+    left: 50px;
 }
 .rb{
     background-image: url(./img/téléchargement__24_-removebg-preview.png);
@@ -176,8 +176,8 @@ form button:hover {
     background-size: cover;
     width: 150px;
     height: 190px;
-    top: 180px;
-    left: 310px;
+    top: 150px;
+    left: 440px;
 }
 .CMone{
     background-image: url(./img/téléchargement__24_-removebg-preview.png);
@@ -345,18 +345,196 @@ form button:hover {
 
 .edit, .delete {
     margin: 6px;
-    padding: 9px 15px;
+    padding: 4px;
     border: none;
     border-radius: 5%;
     position: relative;
-    top: 137px;
-    left: 33px;
+    top: 136px;
+    left: 37px;
+    border-radius: 10px;
 }
 
 .edit {
-    background-color: #fefdfd;
+    background-color: #073916;
 }
 
 .delete {
-    background-color: #000000; 
+    background-color: #073916; 
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .formu {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .stats-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .stats-group .form-group {
+        flex: 1;
+        min-width: 45%;
+    }
+
+    .GK,
+    .CBone,
+    .CBtow,
+    .lb,
+    .rb,
+    .CMone,
+    .CMtow,
+    .CMtrois,
+    .lw,
+    .RW,
+    .ST {
+        width: 150px;
+        height: 190px;
+    }
+
+    .statiqueJoueur {
+        top: 120px;
+        font-size: 10px;
+    }
+
+    .nom {
+        top: 103px;
+        left: 22px;
+        font-size: 11px;
+    }
+
+    .position {
+        font-size: 13px;
+    }
+
+    .joueur img {
+        bottom: 500px;
+        width: 90px;
+    }
+
+    .edit, .delete {
+        top: 138px;
+        left: 40px;
+        padding: 3px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .formu {
+        max-width: 100%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+
+    .stats-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .stats-group .form-group {
+        flex: 1;
+        min-width: 45%;
+    }
+    form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .terrain{
+        position: relative;
+    }
+
+
+    .GK, .CBone, .CBtow, .lb, .rb, .CMone, .CMtow, .CMtrois, .lw, .RW, .ST {
+        width: 100px;
+        height: 120px;
+        position: absolute;
+    }
+
+    .statiqueJoueur {
+        font-size: 6px;
+        top: 80px;
+        left: 13px;
+    }
+
+    .nom {
+        font-size: 10px;
+        top: 64px;
+        left: 15px;
+    }
+
+    .position {
+        font-size: 12px;
+        top: 11px;
+        left: 17px;
+    }
+
+    .joueur img {
+        position: relative;
+        width: 66px;
+        top: 57px;
+        right: 10px;
+    }
+
+    .edit, .delete {
+        top:90px;
+        left: 29px;
+        font-size: 6px;
+        margin: 3px;
+    }
+
+    .GK{
+        left: 190px ;
+    }
+    
+    .CBone{
+        top: 180px;
+        left: 250px;
+    }
+    .CBtow{
+        top: 180px;
+        left: 130px;
+    }
+    .lb{
+        top: 150px;
+        left: 30px;
+    }
+    .rb{
+        top: 150px;
+        left: 350px;
+    }
+    .CMone{
+        top: 360px;
+        left: 190px;
+    }
+    .CMtow{
+        top: 340px;
+        left: 30px;
+    }
+    .CMtrois{
+        top: 340px;
+        left: 340px;
+    }
+    .lw {
+        top: 530px;
+        left: 30px;
+    }
+    
+    .RW {
+        top: 530px;
+        left: 340px;
+    }
+    
+    .ST {
+        top: 560px;
+        left: 190px;
+    }
+
 }
