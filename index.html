@@ -117,11 +117,13 @@
                         <label for="defending">physical :</label>
                         <input type="number" id="physical" name="physical" placeholder="physical" min="1" max="100" required>
                     </div>
-                    <div>
-                        <label class="labl">Photo</label>
-                        <input type="text" id="url" class="inpt" placeholder="entrez Photo URL">
+                    <div class="form-group">
+                        <label>Photo</label>
+                        <select id="url" name="Photo" required>
+                            <option>https://cdn.sofifa.net/players/231/747/25_120.png</option>
+                            <option>https://cdn.sofifa.net/players/209/981/25_120.png</option>
+                        </select>
                     </div>
-
                     <br>
                 </div>
                 <div class="Gk-joueur">
@@ -153,13 +155,18 @@
                         <label for="positioning">positioning :</label>
                         <input type="number" id="positioning" name="positioning" placeholder="Entrez positioning" min="1" max="100" required>
                     </div>
+                    <div>
+                        <label class="labl">Photo</label>
+                        <input type="text" id="url" class="inpt" placeholder="entrez Photo URL">
+                    </div>
+                    <br>
             </div>
             <button type="button" onclick="addJoueur()">Ajouter le joueur</button>
             </form>
         </div>
         <div class="foot">
             <div class="terrain">
-                <div class="GK">
+                <div id="GK" class="GK">
                     <div class="joueur">
                         <img>
                     </div>
@@ -197,7 +204,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="CBone" id="CB">
+                <div class="CBone" id="RB">
                     <div class="joueur">
                         <img>
                     </div>
@@ -589,6 +596,15 @@
                     <img src="./img/téléchargement__24_-removebg-preview.png" alt="" class="imane">
             </div>
 </div>
+
     <script src="main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
