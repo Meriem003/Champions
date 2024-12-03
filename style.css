@@ -86,13 +86,12 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.3s;
-    box-shadow: 0 0 5px rgba(0, 11, 3, 0.5);
 }
 form button:hover {
     transform: scale(1.1);
     background-color: #0a431a;
 }
+
 .Gk-joueur{
     display: none;
 }
