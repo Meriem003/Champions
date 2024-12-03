@@ -116,16 +116,17 @@ function addJoueur() {
     if (!joueurEnEdition && !post.querySelector('.edit') && !post.querySelector('.delete')) {
         const editButton = document.createElement('button');
         editButton.classList.add('edit');
+        editButton.textContent = "✏️";
         editButton.onclick = () => {
             Edit(post, select.value);
         };
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete');
+        deleteButton.textContent = "🗑️";
         deleteButton.onclick = () => {
             Delete(post);
         };
-        
 
         post.appendChild(editButton);
         post.appendChild(deleteButton);
