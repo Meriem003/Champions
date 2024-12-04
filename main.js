@@ -30,8 +30,8 @@ function validationChamps() {
     const nationality = document.getElementById('nationality').value.trim();
     const club = document.getElementById('club').value.trim();
 
-    if (name === ""  || position === ""  || rating === ""  || photoUrl === ""  || club === ""  || nationality === "" ) {
-        errors.push("mazal chi champs khawya");
+    if (name === ""  || position === ""  || photoUrl === ""  || club === ""  || nationality === "" ) {
+        errors.push("Un champ est laissé vide.");
     }
 
     if (position === "GK") {
@@ -43,7 +43,7 @@ function validationChamps() {
         const positioning = document.getElementById('positioning').value.trim();
 
         if (diving === ""  || handling === ""  || kicking === ""  || reflexes === ""  || speed === ""  || positioning === "" ) {
-            errors.push("mazal chi champs khawya.");
+            errors.push("Un champ est laissé vide.");
         }
     } else {
         const pace = document.getElementById('pace').value.trim();
@@ -54,7 +54,7 @@ function validationChamps() {
         const physical = document.getElementById('physical').value.trim();
 
         if (pace === ""  || shooting === ""  || passing === ""  || dribbling === ""  || defending === ""  || physical === "" ) {
-            errors.push("mazal chi champs khawya");
+            errors.push("Un champ est laissé vide.");
         }
     }
 
@@ -65,6 +65,9 @@ function validationChamps() {
 
     return true;
 }
+
+
+
 
 
 let joueurEnEdition = null;
@@ -92,6 +95,8 @@ function addJoueur() {
         const rf = document.getElementById('reflexes');
         const sp = document.getElementById('speed');
         const ps = document.getElementById('positioning');
+        const rtGK=document.getElementById('ratingGK');
+        statique[0].textContent=rtGK.value;
         statique[4].textContent = dv.value;
         statique[6].textContent = hd.value;
         statique[8].textContent = kc.value;
@@ -134,6 +139,7 @@ function addJoueur() {
 
     joueurEnEdition = null;
     document.getElementById("playerForm").reset();
+    totalRate=0;
 }
 
 
