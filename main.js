@@ -30,7 +30,7 @@ function validationChamps() {
     const nationality = document.getElementById('nationality').value.trim();
     const club = document.getElementById('club').value.trim();
 
-    if (name === ""  || position === ""  || photoUrl === ""  || club === ""  || nationality === "" ) {
+    if (name === ""  || position === ""  || rating === ""  || photoUrl === ""  || club === ""  || nationality === "" ){
         errors.push("Un champ est laissé vide.");
     }
 
@@ -65,9 +65,6 @@ function validationChamps() {
 
     return true;
 }
-
-
-
 
 
 let joueurEnEdition = null;
@@ -135,11 +132,23 @@ function addJoueur() {
 
         post.appendChild(editButton);
         post.appendChild(deleteButton);
+    
     }
+    let count = 0
+    const totalJoueur = document.createElement('h3');
+    totalJoueur.textContent = ""
+    
+
+    if (){
+
+    }
+
+
+
+
 
     joueurEnEdition = null;
     document.getElementById("playerForm").reset();
-    totalRate=0;
 }
 
 
@@ -201,3 +210,7 @@ function Delete(post) {
     if (deleteButton) post.removeChild(deleteButton);
 
 }
+
+
+
+
